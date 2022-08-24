@@ -73,8 +73,9 @@ top: 200px;
 }
 
 .modal-header {
-  padding: 2px 16px;
-  background-color: #5cb85c;
+  padding: 2px 16px; 
+   background-color: #149dcc !important;
+  border-color: #149dcc !important;
   color: white;
   justify-content: space-between;
 }
@@ -83,7 +84,7 @@ top: 200px;
 
 .modal-footer {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: #149dcc !important;
   color: white;
   justify-content: flex-start;
 }
@@ -134,13 +135,17 @@ function closesoftPopup() {
   document.getElementById("myModal").style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
+   document.addEventListener(
+  "click",
+  function(event) {
     debugger;
-    document.getElementById("myModal").style.display = "none";
-  }
-}
+    // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+    if (   !event.target.closest(".modal")    ) {
+       document.getElementById("myModal").style.display = "none";
+    }
+  },
+  false
+)
 </script>
     
 <body>
@@ -504,11 +509,11 @@ window.onclick = function(event) {
       <span onClick="closesoftPopup()" id="span" class="close">&times;</span>
     </div>
     <div class="modal-body">
-      <p>HOD: Suman Humagain</p>
-      <p>Software Engineer</p>
+      <p><em>Head of department:</em> Suman Humagain(Software Engineer), CEO of HUBO Company</p>
+      <p></p>
     </div>
     <div class="modal-footer">
-      <h3>Sumanhumagain.com.np</h3>
+      <h3><em>Contact:</em> inbox@Sumanhumagain.com.np</h3>
     </div>
   </div>
 
