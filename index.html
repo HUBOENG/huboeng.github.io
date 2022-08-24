@@ -140,7 +140,7 @@ function closesoftPopup() {
    // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   debugger;
-  if (event.target == modal) {
+  if (event.target == document.getElementById("myModal")) {
     closesoftPopup();
   }
 }
@@ -503,7 +503,7 @@ window.onclick = function(event) {
   <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
-      <h2>Software Engineering Department</h2>
+      <h1>Software Engineering Department</h1>
       <span onClick="closesoftPopup()" id="span" class="close">&times;</span>
     </div>
     <div class="modal-body">
@@ -511,7 +511,7 @@ window.onclick = function(event) {
       <p></p>
     </div>
     <div class="modal-footer">
-      <h3><em>Contact:</em> inbox@Sumanhumagain.com.np</h3>
+      <h1><em>Contact:</em> inbox@Sumanhumagain.com.np</h1>
     </div>
   </div>
 
