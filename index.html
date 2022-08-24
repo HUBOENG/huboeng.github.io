@@ -85,7 +85,7 @@ top: 200px;
   padding: 2px 16px;
   background-color: #5cb85c;
   color: white;
-   
+  justify-content: flex-start;
 }
   
 
@@ -131,12 +131,13 @@ function softPopup() {
 
 // When the user clicks on <span> (x), close the modal
 function closesoftPopup() {
-  document.getElementById("span").style.display = "none";
+  document.getElementById("myModal").style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
+    debugger;
     document.getElementById("myModal").style.display = "block";
   }
 }
@@ -499,8 +500,8 @@ window.onclick = function(event) {
   <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
-      <span onClick="closesoftPopup()" id="span" class="close">&times;</span>
       <h2>Software Engineering Department</h2>
+      <span onClick="closesoftPopup()" id="span" class="close">&times;</span>
     </div>
     <div class="modal-body">
       <p>HOD: Suman Humagain</p>
