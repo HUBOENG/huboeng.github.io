@@ -27,6 +27,17 @@
   
   
 </head>
+  <script>
+        function createPopupWin(pageURL, pageTitle,
+                    popupWinWidth, popupWinHeight) {
+            var left = (screen.width ) ;
+            var top = (screen.height ) ;
+            var myWindow = window.open(pageURL, pageTitle,
+                    'resizable=yes, width=' + popupWinWidth
+                    + ', height=' + popupWinHeight + ', top='
+                    + top + ', left=' + left);
+        }
+    </script>
 <body>
   
   <section class="menu cid-ruZaKtyPCG" once="menu" id="menu2-a">
@@ -100,7 +111,8 @@
                             We provide full stack software developmet.
                         </p>
                         <!--Btn-->
-                        <div class="mbr-section-btn align-left"><a href="index.html#services1-h" class="btn btn-warning-outline display-4">Read More</a></div>
+                        <div class="mbr-section-btn align-left"><a href="index.html#services1-h" onclick = "createPopupWin('https://www.geeksforgeeks.org',
+            'GeeksforGeeks Website', 1200, 650);" class="btn btn-warning-outline display-4">Read More</a></div>
                     </div>
                 </div>
             </div>
