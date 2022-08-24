@@ -135,17 +135,14 @@ function closesoftPopup() {
   document.getElementById("myModal").style.display = "none";
 }
 
-   document.addEventListener(
-  "click",
-  function(event) {
-    debugger;
-    // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-    if (   !event.target.closest(".modal")    ) {
-       document.getElementById("myModal").style.display = "none";
-    }
-  },
-  false
-)
+ 
+   
+   // When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  debugger;
+  if (event.target == modal) {
+    closesoftPopup();
+  }
 </script>
     
 <body>
