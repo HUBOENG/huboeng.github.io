@@ -125,13 +125,13 @@ var modal = document.getElementById("myModal");
 //var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-function softPopup(modalid) {
+function OpenPopup(modalid) {
   debugger;
   document.getElementById(modalid).style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-function closesoftPopup(modalid) {
+function closePopup(modalid) {
   debugger;
   document.getElementById(modalid).style.display = "none";
 }
@@ -141,7 +141,7 @@ function closesoftPopup(modalid) {
    // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == document.getElementById("myModal")) {
-    closesoftPopup();
+    closePopup();
   }
 }
 </script>
@@ -219,7 +219,7 @@ window.onclick = function(event) {
                             We provide full stack software developmet.
                         </p>
                         <!--Btn-->
-                        <div class="mbr-section-btn align-left"><a id="softwareEng" onClick="softPopup('myModal');" class="btn btn-warning-outline display-4">Read More</a></div>
+                        <div class="mbr-section-btn align-left"><a id="softwareEng" onClick="OpenPopup('myModal');" class="btn btn-warning-outline display-4">Read More</a></div>
                     </div>
                 </div>
             </div>
@@ -236,7 +236,7 @@ window.onclick = function(event) {
                             We design, construct & consult.
                         </p>
                         <!--Btn-->
-                        <div class="mbr-section-btn align-left"><a href="index.html#services1-h" class="btn btn-warning-outline display-4">Read More</a></div>
+                        <div class="mbr-section-btn align-left"><a onClick="OpenPopup('myModalCivil');" class="btn btn-warning-outline display-4">Read More</a></div>
                     </div>
                 </div>
             </div>
@@ -252,7 +252,7 @@ window.onclick = function(event) {
                             We are provide wide range of services/facilities including supply of electronics.
                         </p>
                         <!--Btn-->
-                        <div class="mbr-section-btn align-left"><a href="index.html#services1-h" class="btn btn-warning-outline display-4">Read More</a></div>
+                        <div class="mbr-section-btn align-left"><a onClick="OpenPopup('myModalElect');" class="btn btn-warning-outline display-4">Read More</a></div>
                     </div>
                 </div>
             </div>
@@ -268,7 +268,7 @@ window.onclick = function(event) {
                            For research on any Science topics and article writting.
                         </p>
                         <!--Btn-->
-                        <div class="mbr-section-btn align-left"><a href="index.html#services1-h" class="btn btn-warning-outline display-4">Read More</a></div>
+                        <div class="mbr-section-btn align-left"><a onClick="OpenPopup('myModalSci');" class="btn btn-warning-outline display-4">Read More</a></div>
                     </div>
                 </div>
             </div>
@@ -504,7 +504,7 @@ window.onclick = function(event) {
   <div class="modal-content">
     <div class="modal-header">
       <h3>Software Engineering Department</h3>
-      <span onClick="closesoftPopup()" id="span" class="close">&times;</span>
+      <span onClick="closePopup('myModal')" id="span" class="close">&times;</span>
     </div>
     <div class="modal-body">
       <br/><p><b>Head of department:</b> Suman Humagain(Software Engineer) <br/><span style="margin-left: 160px;font-weight: bold;">CEO of HUBO Company</span></p>
@@ -512,6 +512,63 @@ window.onclick = function(event) {
     </div>
     <div class="modal-footer">
       <h3><b>Contact:</b> inbox@Sumanhumagain.com.np</h3>
+    </div>
+  </div>
+
+</div>
+  
+    <!-- The Modal -->
+<div id="myModalCivil" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Civil Engineering Department</h3>
+      <span onClick="closePopup('myModalCivil')" id="span" class="close">&times;</span>
+    </div>
+    <div class="modal-body">
+      <br/><p><b>Head of department:</b> Er. Suresh Humagain(Civil Engineer) <br/><span style="margin-left: 160px;font-weight: bold;">MD of HUBO Company</span></p>
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <h3><b>Contact:</b> 069bce45@gmail.com</h3>
+    </div>
+  </div>
+
+</div>
+  
+  <div id="myModalElect" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Electrical Engineering Department</h3>
+      <span onClick="closePopup('myModalElect')" id="span" class="close">&times;</span>
+    </div>
+    <div class="modal-body">
+      <br/><p><b>Head of department:</b> Er. Samir Bolakhe(Electrical Engineer) <br/><span style="margin-left: 160px;font-weight: bold;">Board Member of HUBO Company</span></p>
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <h3><b>Contact:</b> samirbolakhe@gmail.com</h3>
+    </div>
+  </div>
+
+</div>
+  
+   <div id="myModalSci" class="modal">
+   <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Science Journalism Department</h3>
+      <span onClick="closePopup('myModalSci')" id="span" class="close">&times;</span>
+    </div>
+    <div class="modal-body">
+      <br/><p><b>Head of department:</b> Mr. Saugat Bolakhe(Science Journalist) <br/><span style="margin-left: 160px;font-weight: bold;">Board Member of HUBO Company</span></p>
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <h3><b>Contact:</b> saugatbol@gmail.com</h3>
     </div>
   </div>
 
