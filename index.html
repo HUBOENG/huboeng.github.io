@@ -126,21 +126,19 @@ var modal = document.getElementById("myModal");
 
 // When the user clicks the button, open the modal 
 function OpenPopup(modalid) {
-  debugger;
   document.getElementById(modalid).style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
 function closePopup(modalid) {
-  debugger;
   document.getElementById(modalid).style.display = "none";
 }
 
- 
    
    // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == document.getElementById("myModal")) {
+  if (event.target == document.getElementById("myModal") || event.target == document.getElementById("myModalCivil") || event.target == document.getElementById("myModalElect")
+     || event.target == document.getElementById("myModalSci")) {
     closePopup();
   }
 }
@@ -507,7 +505,7 @@ window.onclick = function(event) {
       <span onClick="closePopup('myModal')" id="span" class="close">&times;</span>
     </div>
     <div class="modal-body">
-      <br/><p><b>Head of department:</b> Suman Humagain(Software Engineer) <br/><span style="margin-left: 160px;font-weight: bold;">CEO of HUBO Company</span></p>
+      <br/><p><b>Head of department:</b> Mr. Suman Humagain(Software Engineer) <br/><span style="margin-left: 160px;font-weight: bold;">CEO of HUBO Company</span></p>
       <p></p>
     </div>
     <div class="modal-footer">
