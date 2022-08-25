@@ -125,21 +125,21 @@ var modal = document.getElementById("myModal");
 //var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-function softPopup() {
+function softPopup(modalid) {
   debugger;
-  document.getElementById("myModal").style.display = "block";
+  document.getElementById(modalid).style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-function closesoftPopup() {
-  document.getElementById("myModal").style.display = "none";
+function closesoftPopup(modalid) {
+  debugger;
+  document.getElementById(modalid).style.display = "none";
 }
 
  
    
    // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  debugger;
   if (event.target == document.getElementById("myModal")) {
     closesoftPopup();
   }
@@ -219,7 +219,7 @@ window.onclick = function(event) {
                             We provide full stack software developmet.
                         </p>
                         <!--Btn-->
-                        <div class="mbr-section-btn align-left"><a id="softwareEng" onClick="softPopup();" class="btn btn-warning-outline display-4">Read More</a></div>
+                        <div class="mbr-section-btn align-left"><a id="softwareEng" onClick="softPopup("myModal");" class="btn btn-warning-outline display-4">Read More</a></div>
                     </div>
                 </div>
             </div>
