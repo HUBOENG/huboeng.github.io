@@ -139,7 +139,7 @@ function closePopup(modalid) {
 window.onclick = function(event) {
   if (event.target == document.getElementById("myModal") || event.target == document.getElementById("myModalCivil") || event.target == document.getElementById("myModalElect")
      || event.target == document.getElementById("myModalSci")) {
-    closePopup();
+    closePopup(event.target.closest(".modal").id);
   }
 }
 </script>
