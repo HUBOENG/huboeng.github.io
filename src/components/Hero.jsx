@@ -1,76 +1,63 @@
-const badges = ['Software', 'Civil', 'Electrical', 'Research']
+const disciplines = ['SOFTWARE', 'CIVIL', 'ELECTRICAL', 'RESEARCH', 'CONSULTING', 'IT SOLUTIONS']
 
 export default function Hero() {
   return (
-    <section id="home" className="relative isolate overflow-hidden">
-      {/* Background image + layered overlays */}
-      <div className="absolute inset-0 -z-10">
-        <img
-          src="/assets/images/background1.jpg"
-          alt=""
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-ink-950/95 via-ink-900/85 to-brand-900/75" />
-        <div className="blueprint-grid absolute inset-0 opacity-60" />
-      </div>
+    <section id="home" className="relative isolate overflow-hidden bg-base-900 pt-32">
+      {/* Backdrop layers */}
+      <div className="tech-grid absolute inset-0 -z-10 opacity-70" />
+      <div className="glow absolute left-1/2 top-0 -z-10 h-[600px] w-[900px] -translate-x-1/2" />
 
-      <div className="mx-auto flex min-h-[100vh] max-w-6xl flex-col justify-center px-6 pb-20 pt-32">
-        <span className="animate-fade-up mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-sm font-medium text-brand-100 backdrop-blur">
-          <span className="h-2 w-2 animate-pulse rounded-full bg-accent-400" />
-          Banepa, Kavrepalanchowk · Nepal
-        </span>
-
-        <h1 className="animate-fade-up max-w-4xl text-4xl font-bold leading-[1.08] text-white sm:text-5xl lg:text-6xl">
-          Engineering &amp; IT solutions,
-          <span className="bg-gradient-to-r from-brand-300 to-accent-400 bg-clip-text text-transparent">
-            {' '}engineered to last.
-          </span>
-        </h1>
-
-        <p className="animate-fade-up mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
-          HUBO unites software, civil, and electrical engineering under one roof —
-          delivering dependable, precisely-built solutions for clients in Nepal
-          and beyond.
+      <div className="mx-auto max-w-7xl px-6">
+        <p className="animate-fade-up mono-label flex items-center gap-3">
+          <span className="h-px w-8 bg-acc-500" />
+          HUBO // ENGINEERING &amp; IT · BANEPA, NEPAL
         </p>
 
-        <div className="animate-fade-up mt-9 flex flex-wrap gap-4">
-          <a href="#services" className="btn-primary">
-            Explore our services
+        <h1 className="animate-fade-up mt-8 max-w-5xl font-display text-5xl font-bold leading-[0.98] text-fg sm:text-7xl lg:text-[5.5rem]">
+          We engineer
+          <br />
+          <span className="text-fg-faint">software, structures</span>
+          <br />
+          &amp; systems that{' '}
+          <span className="bg-gradient-to-r from-acc-500 to-lime-400 bg-clip-text text-transparent">
+            endure
+          </span>
+          .
+        </h1>
+
+        <p className="animate-fade-up mt-8 max-w-xl text-lg leading-relaxed text-fg-dim">
+          One team, four disciplines. HUBO unites software, civil, and electrical
+          engineering with research — delivering precise, dependable work for
+          clients in Nepal and beyond.
+        </p>
+
+        <div className="animate-fade-up mt-10 flex flex-wrap items-center gap-4">
+          <a href="#services" className="btn-acc">
+            Explore services
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+              <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
           </a>
-          <a
-            href="#contact"
-            className="rounded-full border border-white/25 bg-white/5 px-7 py-3 text-base font-semibold text-white backdrop-blur transition-all hover:bg-white/15"
-          >
+          <a href="#contact" className="btn-ghost">
             Start a project
           </a>
         </div>
+      </div>
 
-        {/* Discipline badges */}
-        <div className="animate-fade-up mt-12 flex flex-wrap items-center gap-x-3 gap-y-2">
-          <span className="text-xs font-semibold uppercase tracking-widest text-slate-400">
-            Disciplines
-          </span>
-          {badges.map((b) => (
+      {/* Disciplines marquee */}
+      <div className="relative mt-24 overflow-hidden border-y border-line py-5">
+        <div className="flex w-max animate-marquee gap-12 whitespace-nowrap">
+          {[...disciplines, ...disciplines].map((d, i) => (
             <span
-              key={b}
-              className="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200"
+              key={i}
+              className="flex items-center gap-12 font-mono text-sm tracking-[0.3em] text-fg-faint"
             >
-              {b}
+              {d}
+              <span className="text-acc-500">✦</span>
             </span>
           ))}
         </div>
       </div>
-
-      {/* Scroll cue */}
-      <a
-        href="#services"
-        aria-label="Scroll to services"
-        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 text-white/50 transition hover:text-white sm:block"
-      >
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-          <path d="M12 5v14M6 13l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </a>
     </section>
   )
 }

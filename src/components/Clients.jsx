@@ -7,30 +7,29 @@ const clients = [
 
 export default function Clients() {
   return (
-    <section id="clients" className="bg-white py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
-            Trusted by
-          </p>
-          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Our Clients</h2>
-          <p className="mt-4 text-lg text-ink-500">
-            Organisations that have partnered with us.
-          </p>
+    <section id="clients" className="border-t border-line bg-base-900 py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <p className="mono-label">[ 04 ] Trusted by</p>
+            <h2 className="mt-4 font-display text-4xl font-bold text-fg sm:text-5xl">
+              Organisations we&apos;ve worked with.
+            </h2>
+          </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-4">
+        <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-4">
           {clients.map((c) => (
             <div
               key={c.name}
-              className="flex flex-col items-center gap-4 rounded-2xl border border-slate-200 bg-white p-7 text-center transition-all hover:border-brand-200 hover:shadow-md"
+              className="group flex flex-col items-center gap-5 bg-base-850 p-8 text-center transition-colors hover:bg-base-800"
             >
-              <img
-                src={c.logo}
-                alt={c.name}
-                className="h-20 w-20 rounded-xl object-contain"
-              />
-              <span className="text-sm font-semibold text-ink-700">{c.name}</span>
+              <div className="flex h-20 w-20 items-center justify-center rounded-xl bg-white p-2 ring-1 ring-line">
+                <img src={c.logo} alt={c.name} className="max-h-full max-w-full object-contain" />
+              </div>
+              <span className="font-mono text-xs uppercase tracking-wider text-fg-dim group-hover:text-fg">
+                {c.name}
+              </span>
             </div>
           ))}
         </div>

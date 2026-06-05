@@ -1,18 +1,22 @@
 const stats = [
-  { value: '4', label: 'Engineering departments' },
+  { value: '4', label: 'Engineering disciplines' },
   { value: '4+', label: 'Trusted clients' },
   { value: '100%', label: 'Commitment to quality' },
-  { value: 'Global', label: 'Service ambition' },
+  { value: '∞', label: 'Global ambition' },
 ]
 
 export default function Stats() {
   return (
-    <section className="bg-brand-700">
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-6 py-14 md:grid-cols-4">
+    <section className="border-t border-line bg-base-900">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-line border-x border-line md:grid-cols-4 md:divide-y-0">
         {stats.map((s) => (
-          <div key={s.label} className="text-center">
-            <p className="text-3xl font-bold text-white sm:text-4xl">{s.value}</p>
-            <p className="mt-1 text-sm font-medium text-brand-100">{s.label}</p>
+          <div key={s.label} className="px-6 py-12 text-center">
+            <p className="font-display text-4xl font-bold text-fg sm:text-5xl">
+              {s.value}
+            </p>
+            <p className="mt-2 font-mono text-xs uppercase tracking-[0.2em] text-fg-faint">
+              {s.label}
+            </p>
           </div>
         ))}
       </div>

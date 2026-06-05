@@ -7,6 +7,7 @@ import Process from './components/Process.jsx'
 import Clients from './components/Clients.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
+import ChatWidget from './components/ChatWidget.jsx'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <ChatWidget />
     </>
   )
 }

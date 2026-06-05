@@ -1,38 +1,17 @@
 import { useState } from 'react'
 
-// NOTE: GitHub Pages is static (no backend), so this form opens the visitor's
-// email client with a prefilled message. To collect submissions automatically,
-// sign up at https://formspree.io and replace handleSubmit with a POST to your
-// Formspree endpoint.
-const RECIPIENT = 'returnzerosh@gmail.com'
+// GitHub Pages is static — this opens the visitor's email client. Swap for a
+// Formspree POST (https://formspree.io) to collect submissions automatically.
+const RECIPIENT = 'huboengineering@gmail.com'
 
 const details = [
-  {
-    label: 'Address',
-    value: 'Banepa, Kavrepalanchowk, Nepal',
-    icon: (
-      <path d="M12 21s-6-5.686-6-10a6 6 0 1112 0c0 4.314-6 10-6 10z M12 11a2 2 0 100-4 2 2 0 000 4z" />
-    ),
-  },
-  {
-    label: 'Email',
-    value: 'returnzerosh@gmail.com',
-    href: 'mailto:returnzerosh@gmail.com',
-    icon: <path d="M3 7l9 6 9-6 M3 7v10a1 1 0 001 1h16a1 1 0 001-1V7 M3 7l1-1h16l1 1" />,
-  },
-  {
-    label: 'Phone',
-    value: '+977 9843371844',
-    href: 'tel:+9779843371844',
-    icon: (
-      <path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" />
-    ),
-  },
+  { label: 'Address', value: 'Banepa, Kavrepalanchowk, Nepal' },
+  { label: 'Email', value: 'huboengineering@gmail.com', href: 'mailto:huboengineering@gmail.com' },
+  { label: 'Phone', value: '+977 9849579603', href: 'tel:+9779849579603' },
 ]
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
-
   const update = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
 
   const handleSubmit = (e) => {
@@ -45,60 +24,39 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-slate-50 py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
-            Get in touch
-          </p>
-          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Contact Us</h2>
-          <p className="mt-4 text-lg text-ink-500">
-            Tell us about your project — we usually respond within a day.
-          </p>
-        </div>
+    <section id="contact" className="border-t border-line bg-base-950 py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid gap-12 lg:grid-cols-2">
+          {/* Left */}
+          <div>
+            <p className="mono-label">[ 05 ] Get in touch</p>
+            <h2 className="mt-4 font-display text-4xl font-bold text-fg sm:text-5xl">
+              Let&apos;s build something that lasts.
+            </h2>
+            <p className="mt-5 max-w-md text-lg text-fg-dim">
+              Tell us about your project — we usually respond within a day.
+            </p>
 
-        <div className="mt-16 grid gap-10 lg:grid-cols-5">
-          {/* Details + map */}
-          <div className="lg:col-span-2">
-            <ul className="space-y-5">
+            <dl className="mt-10 space-y-px overflow-hidden rounded-2xl border border-line bg-line">
               {details.map((d) => (
-                <li key={d.label} className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      {d.icon}
-                    </svg>
-                  </span>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-ink-500">
-                      {d.label}
-                    </p>
+                <div key={d.label} className="flex items-center justify-between bg-base-900 px-5 py-4">
+                  <dt className="font-mono text-xs uppercase tracking-[0.2em] text-fg-faint">
+                    {d.label}
+                  </dt>
+                  <dd className="text-sm text-fg">
                     {d.href ? (
-                      <a href={d.href} className="text-ink-900 hover:text-brand-700">
-                        {d.value}
-                      </a>
+                      <a href={d.href} className="hover:text-acc-500">{d.value}</a>
                     ) : (
-                      <p className="text-ink-900">{d.value}</p>
+                      d.value
                     )}
-                  </div>
-                </li>
+                  </dd>
+                </div>
               ))}
-            </ul>
-
-            <div className="mt-7 overflow-hidden rounded-2xl ring-1 ring-slate-200">
-              <iframe
-                title="HUBO location"
-                className="h-56 w-full"
-                loading="lazy"
-                src="https://www.google.com/maps?q=Banepa%20Kavrepalanchowk%20Nepal&output=embed"
-              />
-            </div>
+            </dl>
           </div>
 
           {/* Form */}
-          <form
-            onSubmit={handleSubmit}
-            className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200 lg:col-span-3"
-          >
+          <form onSubmit={handleSubmit} className="card p-8">
             <div className="grid gap-5 sm:grid-cols-2">
               <Field label="Name" name="name" value={form.name} onChange={update} required />
               <Field label="Email" name="email" type="email" value={form.email} onChange={update} required />
@@ -107,7 +65,7 @@ export default function Contact() {
               <Field label="Phone" name="phone" type="tel" value={form.phone} onChange={update} />
             </div>
             <div className="mt-5">
-              <label className="mb-1.5 block text-sm font-medium text-ink-700">
+              <label className="mb-2 block font-mono text-xs uppercase tracking-wider text-fg-faint">
                 Message
               </label>
               <textarea
@@ -116,13 +74,10 @@ export default function Contact() {
                 value={form.message}
                 onChange={update}
                 required
-                className="w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
+                className="w-full rounded-lg border border-line bg-base-900 px-3.5 py-2.5 text-sm text-fg outline-none transition placeholder:text-fg-faint focus:border-acc-500"
               />
             </div>
-            <button
-              type="submit"
-              className="mt-6 w-full rounded-full bg-brand-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-800 hover:shadow-md sm:w-auto"
-            >
+            <button type="submit" className="mt-6 btn-acc w-full justify-center">
               Send message
             </button>
           </form>
@@ -135,9 +90,9 @@ export default function Contact() {
 function Field({ label, name, type = 'text', value, onChange, required }) {
   return (
     <div>
-      <label className="mb-1.5 block text-sm font-medium text-ink-700">
+      <label className="mb-2 block font-mono text-xs uppercase tracking-wider text-fg-faint">
         {label}
-        {required && <span className="text-brand-600"> *</span>}
+        {required && <span className="text-acc-500"> *</span>}
       </label>
       <input
         type={type}
@@ -145,7 +100,7 @@ function Field({ label, name, type = 'text', value, onChange, required }) {
         value={value}
         onChange={onChange}
         required={required}
-        className="w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
+        className="w-full rounded-lg border border-line bg-base-900 px-3.5 py-2.5 text-sm text-fg outline-none transition focus:border-acc-500"
       />
     </div>
   )
