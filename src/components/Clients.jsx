@@ -2,7 +2,6 @@ const clients = [
   { name: 'Bhairav Hospital', logo: '/assets/images/hospital.png' },
   { name: 'Hotel Sarathi', logo: '/assets/images/sarathi.jpg' },
   { name: 'Panauti Municipality', logo: '/assets/images/Municipality.png' },
-  { name: 'Milestones Pvt. Ltd', logo: '/assets/images/MS.jpg' },
 ]
 
 export default function Clients() {
@@ -18,7 +17,7 @@ export default function Clients() {
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-4">
+        <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
           {clients.map((c) => (
             <div
               key={c.name}
