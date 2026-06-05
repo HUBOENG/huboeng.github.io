@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
+  /* Brand — refined teal/cyan */
   --color-brand-50: #ecfeff;
   --color-brand-100: #cffafe;
   --color-brand-200: #a5f3fc;
@@ -12,9 +13,18 @@
   --color-brand-800: #155e75;
   --color-brand-900: #164e63;
 
+  /* Accent — engineering amber for highlights/CTAs */
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+
+  /* Ink — deep navy neutrals */
+  --color-ink-950: #0b1220;
   --color-ink-900: #0f172a;
+  --color-ink-800: #1e293b;
   --color-ink-700: #334155;
   --color-ink-500: #64748b;
+  --color-ink-400: #94a3b8;
 
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
     Roboto, Helvetica, Arial, sans-serif;
@@ -29,10 +39,28 @@
   }
   h1, h2, h3, h4 {
     @apply text-ink-900 font-semibold tracking-tight;
+    text-wrap: balance;
   }
   section {
     scroll-margin-top: 5rem;
   }
+}
+
+@layer components {
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-600;
+  }
+  .btn-primary {
+    @apply rounded-full bg-brand-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-brand-900/20 transition-all hover:bg-brand-500 hover:shadow-xl;
+  }
+}
+
+/* Blueprint grid motif for dark sections */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
 }
 
 @keyframes fade-up {

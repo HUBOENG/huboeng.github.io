@@ -7,11 +7,13 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
-              <img
-                src="/assets/images/HuboLogo.jpg"
-                alt="HUBO"
-                className="h-9 w-9 rounded-md object-cover"
-              />
+              <span className="flex h-12 items-center justify-center rounded-lg bg-white p-1.5">
+                <img
+                  src="/assets/images/Logo.png"
+                  alt="HUBO Company logo"
+                  className="h-full w-auto object-contain"
+                />
+              </span>
               <span className="text-lg font-bold text-white">HUBO Company</span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
