@@ -13,7 +13,7 @@ export default function Hero() {
           HUBO // ENGINEERING &amp; IT · BANEPA, NEPAL
         </p>
 
-        <h1 className="animate-fade-up mt-8 max-w-5xl font-display text-5xl font-bold leading-[0.98] text-fg sm:text-7xl lg:text-[5.5rem]">
+        <h1 className="animate-fade-up mt-8 max-w-4xl font-display text-4xl font-bold leading-[1.02] text-fg sm:text-5xl lg:text-6xl">
           We engineer
           <br />
           <span className="text-fg-faint">software, structures</span>
