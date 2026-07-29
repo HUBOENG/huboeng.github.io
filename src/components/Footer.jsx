@@ -1,12 +1,13 @@
-const year = 2026
+const year = 2026;
 
 const nav = [
-  { label: 'Services', href: '#services' },
-  { label: 'Why HUBO', href: '#why' },
-  { label: 'Process', href: '#process' },
-  { label: 'Clients', href: '#clients' },
-  { label: 'Contact', href: '#contact' },
-]
+  { label: "Services", href: "#services" },
+  { label: "Why HUBO", href: "#why" },
+  { label: "Process", href: "#process" },
+  { label: "Clients", href: "#clients" },
+  { label: "Careers", href: "#careers" },
+  { label: "Contact", href: "#contact" },
+];
 
 export default function Footer() {
   return (
@@ -47,13 +48,22 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 flex flex-col items-start justify-between gap-4 text-sm text-fg-faint sm:flex-row sm:items-center">
-          <p className="font-mono text-xs">© {year} HUBO COMPANY · ALL RIGHTS RESERVED</p>
+          <p className="font-mono text-xs">
+            © {year} HUBO COMPANY · ALL RIGHTS RESERVED
+          </p>
           <div className="flex gap-5 font-mono text-xs">
-            <a href="mailto:huboengineering@gmail.com" className="hover:text-acc-500">EMAIL</a>
-            <a href="tel:+9779849579603" className="hover:text-acc-500">+977 9849579603</a>
+            <a
+              href="mailto:huboengineering@gmail.com"
+              className="hover:text-acc-500"
+            >
+              EMAIL
+            </a>
+            <a href="tel:+9779849579603" className="hover:text-acc-500">
+              +977 9849579603
+            </a>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -27,15 +27,17 @@ deployment → Source**, select **GitHub Actions**.
 ```
 public/assets/images/   images (logo, photos, client logos)
 public/CNAME            custom domain (hubo.com.np)
-src/components/         Navbar, Hero, Services, Stats, Clients, Contact, Footer
+src/components/         Navbar, Hero, Services, Stats, Clients, Careers, Contact, Footer
 src/index.css          Tailwind theme (brand colors, fonts)
 ```
 
-## Contact form
+## Contact & careers forms
 
-GitHub Pages has no backend, so the contact form opens the visitor's email
-client (`mailto:`). To collect submissions automatically, create a
+GitHub Pages has no backend, so the contact and job application forms open the
+visitor's email client (`mailto:`). To collect submissions automatically, create a
 [Formspree](https://formspree.io) form and update `handleSubmit` in
-`src/components/Contact.jsx`.
+`src/components/Contact.jsx` and/or `src/components/Careers.jsx`.
+
+Open roles are listed in `src/components/Careers.jsx` (`vacancies` array).
 
 > The previous Mobirise site is preserved in git history (`index.old.html`).

@@ -1,30 +1,31 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
 const links = [
-  { label: 'Services', href: '#services', n: '01' },
-  { label: 'Why HUBO', href: '#why', n: '02' },
-  { label: 'Process', href: '#process', n: '03' },
-  { label: 'Clients', href: '#clients', n: '04' },
-  { label: 'Contact', href: '#contact', n: '05' },
-]
+  { label: "Services", href: "#services", n: "01" },
+  { label: "Why HUBO", href: "#why", n: "02" },
+  { label: "Process", href: "#process", n: "03" },
+  { label: "Clients", href: "#clients", n: "04" },
+  { label: "Careers", href: "#careers", n: "05" },
+  { label: "Contact", href: "#contact", n: "06" },
+];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12)
-    onScroll()
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled || open
-          ? 'border-b border-line bg-base-900/80 backdrop-blur-xl'
-          : 'border-b border-transparent'
+          ? "border-b border-line bg-base-900/80 backdrop-blur-xl"
+          : "border-b border-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -66,7 +67,14 @@ export default function Navbar() {
           onClick={() => setOpen((v) => !v)}
           className="flex h-10 w-10 items-center justify-center rounded-md text-fg lg:hidden"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             {open ? (
               <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
             ) : (
@@ -86,7 +94,9 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   className="flex items-center gap-3 border-b border-line/60 py-3 text-sm font-medium text-fg-dim hover:text-fg"
                 >
-                  <span className="font-mono text-[10px] text-acc-500">{l.n}</span>
+                  <span className="font-mono text-[10px] text-acc-500">
+                    {l.n}
+                  </span>
                   {l.label}
                 </a>
               </li>
@@ -104,5 +114,5 @@ export default function Navbar() {
         </div>
       )}
     </header>
-  )
+  );
 }
