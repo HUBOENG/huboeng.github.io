@@ -14,8 +14,21 @@ const icons = {
 
 const services = [
   {
-    key: 'software',
+    key: 'civil',
     n: '01',
+    title: 'Civil Engineering',
+    icon: icons.building,
+    image: '/assets/images/ce-506x265.jpg',
+    summary: 'We design, construct, and consult across civil engineering projects.',
+    points: ['Structural design', 'Construction', 'Consulting'],
+    department: 'Civil Engineering Department',
+    head: 'Er. Suresh Humagain',
+    role: 'Civil Engineer · MD of HUBO Company',
+    contact: '069bce45@gmail.com',
+  },
+  {
+    key: 'software',
+    n: '02',
     title: 'Software Development',
     icon: icons.code,
     image: '/assets/images/se-506x523.jpg',
@@ -26,19 +39,6 @@ const services = [
     role: 'Software Engineer · Founder of HUBO Company',
     photo: '/assets/images/suman.jpg',
     contact: 'inbox@sumanhumagain.com.np',
-  },
-  {
-    key: 'civil',
-    n: '02',
-    title: 'Civil Engineering',
-    icon: icons.building,
-    image: '/assets/images/ce-506x265.jpg',
-    summary: 'We design, construct, and consult across civil engineering projects.',
-    points: ['Structural design', 'Construction', 'Consulting'],
-    department: 'Civil Engineering Department',
-    head: 'Er. Suresh Humagain',
-    role: 'Civil Engineer · MD of HUBO Company',
-    contact: '069bce45@gmail.com',
   },
   {
     key: 'electrical',
