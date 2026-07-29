@@ -20,7 +20,7 @@ const answers = {
   location:
     'We’re based in Banepa, Kavrepalanchowk, Nepal — serving clients locally and beyond.',
   contact:
-    `You can reach us at:\n• Email: huboengineering@gmail.com\n• Phone / WhatsApp: ${WHATSAPP_DISPLAY}`,
+    `You can reach us at:\n• Email: info@huboengineering.com.np\n• Phone / WhatsApp: ${WHATSAPP_DISPLAY}`,
   quote:
     'Happy to help with a quote! Tap the WhatsApp button below and tell us about your project — our team usually replies right away.',
 }

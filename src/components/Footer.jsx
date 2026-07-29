@@ -53,7 +53,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-5 font-mono text-xs">
             <a
-              href="mailto:huboengineering@gmail.com"
+              href="mailto:info@huboengineering.com.np"
               className="hover:text-acc-500"
             >
               EMAIL

@@ -46,7 +46,7 @@
 }
 
 @layer components {
-  /* Monospace technical label, e.g. "[ 01 ] SERVICES" */
+  /* Monospace section label */
   .mono-label {
     @apply font-mono text-xs uppercase tracking-[0.25em] text-acc-600;
   }

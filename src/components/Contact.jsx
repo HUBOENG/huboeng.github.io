@@ -2,14 +2,14 @@ import { useState } from "react";
 
 // GitHub Pages is static — this opens the visitor's email client. Swap for a
 // Formspree POST (https://formspree.io) to collect submissions automatically.
-const RECIPIENT = "huboengineering@gmail.com";
+const RECIPIENT = "info@huboengineering.com.np";
 
 const details = [
   { label: "Address", value: "Banepa, Kavrepalanchowk, Nepal" },
   {
     label: "Email",
-    value: "huboengineering@gmail.com",
-    href: "mailto:huboengineering@gmail.com",
+    value: "info@huboengineering.com.np",
+    href: "mailto:info@huboengineering.com.np",
   },
   { label: "Phone", value: "+977 9849579603", href: "tel:+9779849579603" },
 ];
@@ -41,7 +41,7 @@ export default function Contact() {
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Left */}
           <div>
-            <p className="mono-label">[ 06 ] Get in touch</p>
+            <p className="mono-label">Get in touch</p>
             <h2 className="mt-4 font-display text-4xl font-bold text-fg sm:text-5xl">
               Let&apos;s build something that lasts.
             </h2>

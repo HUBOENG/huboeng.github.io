@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { label: "Services", href: "#services", n: "01" },
-  { label: "Why HUBO", href: "#why", n: "02" },
-  { label: "Process", href: "#process", n: "03" },
-  { label: "Clients", href: "#clients", n: "04" },
-  { label: "Careers", href: "#careers", n: "05" },
-  { label: "Contact", href: "#contact", n: "06" },
+  { label: "Services", href: "#services" },
+  { label: "Why HUBO", href: "#why" },
+  { label: "Process", href: "#process" },
+  { label: "Clients", href: "#clients" },
+  { label: "Careers", href: "#careers" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -47,11 +47,8 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="group flex items-center gap-1.5 text-sm font-medium text-fg-dim transition-colors hover:text-fg"
+                className="text-sm font-medium text-fg-dim transition-colors hover:text-fg"
               >
-                <span className="font-mono text-[10px] text-acc-500/70 group-hover:text-acc-500">
-                  {l.n}
-                </span>
                 {l.label}
               </a>
             </li>
@@ -92,11 +89,8 @@ export default function Navbar() {
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-3 border-b border-line/60 py-3 text-sm font-medium text-fg-dim hover:text-fg"
+                  className="border-b border-line/60 py-3 text-sm font-medium text-fg-dim hover:text-fg"
                 >
-                  <span className="font-mono text-[10px] text-acc-500">
-                    {l.n}
-                  </span>
                   {l.label}
                 </a>
               </li>

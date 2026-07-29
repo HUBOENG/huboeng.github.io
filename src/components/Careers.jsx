@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const RECIPIENT = "huboengineering@gmail.com";
+const RECIPIENT = "info@huboengineering.com.np";
 
 const vacancies = [
   {
@@ -35,7 +35,7 @@ export default function Careers() {
     <section id="careers" className="border-t border-line bg-base-900 py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl">
-          <p className="mono-label">[ 05 ] Careers</p>
+          <p className="mono-label">Careers</p>
           <h2 className="mt-4 font-display text-4xl font-bold text-fg sm:text-5xl">
             Build your career at HUBO.
           </h2>
